@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mật Mã Cơ Thể - Web App</title>
+    <style>
+        :root {
+            --primary-bg: #f5f7f6;
+            --app-bg: #ffffff;
+            --text-main: #2c3e50;
+            --text-muted: #7f8c8d;
+            --accent-color: #5c4d9a;
+            --border-color: #ecf0f1;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { background-color: var(--primary-bg); display: flex; justify-content: center; height: 100vh; overflow: hidden; }
+        
+        #app-container {
+            width: 100%;
+            max-width: 480px;
+            height: 100dvh; /* Chiều cao chuẩn cho di động */
+            background-color: var(--app-bg);
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 16px;
+            border-bottom: 1px solid var(--border-color);
+            background: #fff;
+            min-height: 44px; 
+        }
+        #back-btn {
+            position: absolute;
+            left: 16px;
+            background: none;
+            border: none;
+            font-size: 28px;
+            line-height: 1;
+            cursor: pointer;
+            color: var(--text-main);
+            display: none;
+        }
+        h1#header-title { font-size: 16px; font-weight: 600; color: var(--text-main); text-align: center; }
+        
+        /* KHU VỰC HIỂN THỊ CÁC TAB */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: #fcfcfc;
+            overflow: hidden; 
+        }
+        .tab-view { display: none; width: 100%; height: 100%; }
+        .tab-view.active { display: flex; flex-direction: column; }
+        
+        /* Chế độ xem Lưới của MMCT */
+        .grid-container {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 12px;
+            padding: 12px 16px;
+            overflow-y: auto;
+        }
+        
+        .card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .icon-circle {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+            font-size: 28px;
+        }
+        .card-title { font-size: 13px; color: var(--text-main); font-weight: 500; line-height: 1.2; }
+
+        /* Chế độ xem Bài viết chi tiết của MMCT */
+        #content-view {
+            display: none;
+            overflow-y: auto;
+            padding: 20px;
+            height: 100%;
+        }
+        .content-section { margin-bottom: 24px; }
+        .content-section h3 { color: var(--accent-color); font-size: 15px; margin-bottom: 12px; text-transform: uppercase; border-bottom: 1px solid var(--border-color); padding-bottom: 4px; }
+        .content-section p { font-size: 14.5px; color: var(--text-main); line-height: 1.6; margin-bottom: 10px; }
+        .content-section ul { padding-left: 20px; margin-bottom: 10px; font-size: 14.5px; color: var(--text-main); line-height: 1.6; }
+        .content-section li { margin-bottom: 6px; }
+        .content-section strong { color: #000; }
+
+        /* CSS BẢNG CẢM XÚC ÉP KHUNG (Fit to Screen) */
+        .dict-table {
+            width: 100%;
+            height: 100%; /* Kéo giãn vừa đúng 100% chiều cao vùng trống */
+            border-collapse: collapse;
+            table-layout: fixed;
+            font-size: clamp(10px, 1.8vh, 14px); /* Tự động thu phóng chữ theo màn hình */
+            background: #fff;
+        }
+        .dict-table th, .dict-table td {
+            border: 1px solid var(--border-color);
+            padding: 2px 4px;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 1.25;
+        }
+        .dict-table th { height: 6%; color: #2ecc71; font-weight: 700; font-size: 1.1em; }
+        .dict-table td { height: 15.6%; } /* 6 hàng chia đều phần còn lại */
+        .col-1 { color: #27ae60; font-weight: bold; font-size: 1.2em; display: block; margin-bottom: 2px;}
+        .col-1-text { font-weight: normal; font-size: 0.85em; color: var(--text-main); display: block; text-transform: uppercase;}
+        
+        /* Khi bảng hiển thị trong bài viết, ép chiều cao cố định để không bị bẹp */
+        #content-view .dict-table { height: 65vh; margin: 12px 0; }
+
+        /* TAB TRỐNG MMNT */
+        #view-mmnt { align-items: center; justify-content: center; color: var(--text-muted); font-size: 15px; }
+
+        /* FOOTER ĐIỀU HƯỚNG */
+        footer {
+            display: flex;
+            background: #fff;
+            border-top: 1px solid var(--border-color);
+            height: 46px; 
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.03);
+            z-index: 10;
+        }
+        .footer-tab {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px; 
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .footer-tab.active { color: var(--accent-color); font-weight: 700; }
+        .tab-icon { font-size: 18px; margin-bottom: 2px; filter: grayscale(100%); opacity: 0.6; }
+        .footer-tab.active .tab-icon { filter: grayscale(0%); opacity: 1; }
+    </style>
+</head>
+<body>
+
+<div id="app-container">
+    <header>
+        <button id="back-btn">‹</button>
+        <h1 id="header-title">Mật Mã Cơ Thể™</h1>
+    </header>
+    
+    <main>
+        <!-- Tab 1: MẬT MÃ CẢM XÚC -->
+        <div id="view-mmcx" class="tab-view"></div>
+        
+        <!-- Tab 2: MẬT MÃ CƠ THỂ (Mặc định) -->
+        <div id="view-mmct" class="tab-view active">
+            <div class="grid-container" id="grid"></div>
+            <div id="content-view"></div>
+        </div>
+        
+        <!-- Tab 3: MẬT MÃ NIỀM TIN -->
+        <div id="view-mmnt" class="tab-view">
+            <p>Nội dung đang cập nhật...</p>
+        </div>
+    </main>
+
+    <!-- THANH FOOTER -->
+    <footer>
+        <div class="footer-tab" id="tab-mmcx" onclick="switchTab('mmcx')">
+            <div class="tab-icon">❤️</div>
+            <div>MMCX</div>
+        </div>
+        <div class="footer-tab active" id="tab-mmct" onclick="switchTab('mmct')">
+            <div class="tab-icon">🧍</div>
+            <div>MMCT</div>
+        </div>
+        <div class="footer-tab" id="tab-mmnt" onclick="switchTab('mmnt')">
+            <div class="tab-icon">🧠</div>
+            <div>MMNT</div>
+        </div>
+    </footer>
+</div>
+
+<script src="data.js"></script>
+
+<script>
+    let historyStack = ["root"];
+    const views = {
+        mmcx: document.getElementById("view-mmcx"),
+        mmct: document.getElementById("view-mmct"),
+        mmnt: document.getElementById("view-mmnt")
+    };
+    const tabs = {
+        mmcx: document.getElementById("tab-mmcx"),
+        mmct: document.getElementById("tab-mmct"),
+        mmnt: document.getElementById("tab-mmnt")
+    };
+    const grid = document.getElementById("grid");
+    const contentView = document.getElementById("content-view");
+    const headerTitle = document.getElementById("header-title");
+    const backBtn = document.getElementById("back-btn");
+
+    // BỘ TỪ ĐIỂN: Bảng Cảm Xúc Tối Ưu Mới
+    const dictionary = {
+        "[BANG_CAM_XUC]": `
+            <table class="dict-table">
+                <tr>
+                    <th style="width: 20%;"></th>
+                    <th style="width: 40%;">A</th>
+                    <th style="width: 40%;">B</th>
+                </tr>
+                <tr>
+                    <td><span class="col-1">1</span><span class="col-1-text">Tim hoặc<br>ruột non</span></td>
+                    <td>Bị bỏ rơi<br>Bị phản bội<br>Cô độc<br>Lạc lõng<br>Tình yêu không được đáp lại</td>
+                    <td>Nỗ lực không được công nhận<br>Đau lòng<br>Bất an<br>Vui mừng quá mức<br>Tổn thương</td>
+                </tr>
+                <tr>
+                    <td><span class="col-1">2</span><span class="col-1-text">Lá lách<br>hoặc dạ dày</span></td>
+                    <td>Lo âu<br>Tuyệt vọng<br>Chán ghét/Ghê tởm<br>Bồn chồn<br>Lo nghĩ</td>
+                    <td>Thất bại<br>Bất lực<br>Mất hy vọng<br>Mất kiểm soát<br>Tự ti</td>
+                </tr>
+                <tr>
+                    <td><span class="col-1">3</span><span class="col-1-text">Phổi hoặc<br>đại tràng</span></td>
+                    <td>Khóc lóc<br>Chán nản<br>Bị từ chối<br>Buồn bã<br>Đau buồn</td>
+                    <td>Hoang mang<br>Phòng thủ<br>Thương tiếc<br>Ngược đãi bản thân<br>Bướng bỉnh</td>
+                </tr>
+                <tr>
+                    <td><span class="col-1">4</span><span class="col-1-text">Gan hoặc<br>túi mật</span></td>
+                    <td>Tức giận<br>Cay đắng<br>Tội lỗi<br>Căm ghét<br>Oán giận</td>
+                    <td>Trầm cảm/ U uất<br>Bực bội, chán nản<br>Thiếu quyết đoán<br>Hoảng loạn<br>Không được trân trọng</td>
+                </tr>
+                <tr>
+                    <td><span class="col-1">5</span><span class="col-1-text">Thận hoặc<br>bàng quang</span></td>
+                    <td>Đổ lỗi<br>Khiếp sợ<br>Sợ hãi<br>Kinh hoàng<br>Cáu kỉnh, bực tức</td>
+                    <td>Xung đột<br>Bất an khi sáng tạo<br>Kinh hãi<br>Đơn độc<br>Nhu nhược</td>
+                </tr>
+                <tr>
+                    <td><span class="col-1">6</span><span class="col-1-text">Các tuyến<br>sinh dục</span></td>
+                    <td>Nhục nhã<br>Ghen tị<br>Khao khát<br>Ham muốn<br>Quá tải/Choáng ngợp</td>
+                    <td>Kiêu ngạo<br>Xấu hổ<br>Bất ngờ<br>Không xứng đáng<br>Vô dụng</td>
+                </tr>
+            </table>`
+    };
+
+    function processDictionary(content) {
+        let processed = content;
+        for (const [key, value] of Object.entries(dictionary)) {
+            processed = processed.split(key).join(value);
+        }
+        return processed;
+    }
+
+    // Logic Render riêng cho Tab MMCT (Mật mã cơ thể)
+    function renderView() {
+        const currentId = historyStack[historyStack.length - 1];
+        const data = appData[currentId];
+        
+        headerTitle.textContent = data.title;
+        backBtn.style.display = historyStack.length > 1 ? "block" : "none";
+        
+        if (data.type === "content") {
+            grid.style.display = "none";
+            contentView.style.display = "block";
+            contentView.innerHTML = processDictionary(data.content);
+            contentView.scrollTop = 0; 
+        } else {
+            grid.style.display = "grid";
+            contentView.style.display = "none";
+            grid.innerHTML = "";
+            
+            data.items.forEach(item => {
+                const card = document.createElement("div");
+                card.className = "card";
+                card.onclick = () => {
+                    if(appData[item.id]) { 
+                        historyStack.push(item.id);
+                        renderView();
+                    } else {
+                        alert("Thư mục này đang trống, chúng ta sẽ thêm dữ liệu sau nhé!");
+                    }
+                };
+                card.innerHTML = `
+                    <div class="icon-circle" style="background-color: ${item.color}">${item.icon}</div>
+                    <div class="card-title">${item.title}</div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+    }
+
+    // Logic chuyển đổi Tab
+    function switchTab(tabName) {
+        // Ẩn tất cả views & tắt active tabs
+        Object.values(views).forEach(v => v.classList.remove("active"));
+        Object.values(tabs).forEach(t => t.classList.remove("active"));
+        
+        // Bật view & tab được chọn
+        views[tabName].classList.add("active");
+        tabs[tabName].classList.add("active");
+
+        if (tabName === "mmcx") {
+            headerTitle.textContent = "Mật Mã Cảm Xúc";
+            backBtn.style.display = "none";
+        } else if (tabName === "mmnt") {
+            headerTitle.textContent = "Mật Mã Niềm Tin";
+            backBtn.style.display = "none";
+        } else if (tabName === "mmct") {
+        historyStack = ["root"]; // Xóa sạch lịch sử, ép quay về thư mục gốc
+        renderView(); // Vẽ lại giao diện Trang chủ
+    }
+    }
+
+    backBtn.onclick = () => {
+        if (historyStack.length > 1) { historyStack.pop(); renderView(); }
+    };
+
+    window.onload = () => {
+        // Đổ sẵn Bảng Cảm Xúc vào thẳng Tab MMCX
+        views.mmcx.innerHTML = dictionary["[BANG_CAM_XUC]"];
+        
+        if (typeof appData !== 'undefined') {
+            renderView(); // Chạy Tab MMCT mặc định
+        } else {
+            alert("Lỗi: Không tìm thấy tệp data.js.");
+        }
+    };
+</script>
+</body>
+</html>
