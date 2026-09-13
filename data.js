@@ -11170,7 +11170,7 @@ const appData = {
             { id: "muscle_hip", title: "1. Cơ hông", icon: "<img src='./images/Lower_Limb_Muscle_01_hip_muscle.png' style='width:100%;height:100%;object-fit:cover;border-radius:50%;'>", color: "transparent" },
             { id: "muscle_foot", title: "2. Cơ bàn chân", icon: "<img src='./images/Lower_Limb_Muscle_03_foot_muscle.png' style='width:100%;height:100%;object-fit:cover;border-radius:50%;'>", color: "transparent" },
             { id: "muscle_thigh", title: "3. Cơ đùi", icon: "<img src='./images/Lower_Limb_Muscle_02_thigh_muscle.png' style='width:100%;height:100%;object-fit:cover;border-radius:50%;'>", color: "transparent" },
-            { id: "muscle_leg", title: "4. Cơ chân", icon: "<img src='./images/Lower_Limb_Muscle_04_leg_muscle.png' style='width:100%;height:100%;object-fit:cover;border-radius:50%;'>", color: "transparent" }
+            { id: "muscle_leg", title: "4. Cơ cẳng chân", icon: "<img src='./images/Lower_Limb_Muscle_04_leg_muscle.png' style='width:100%;height:100%;object-fit:cover;border-radius:50%;'>", color: "transparent" }
         ]
     },
     "muscle_hip": {
@@ -11292,7 +11292,7 @@ const appData = {
     },
     "muscle_leg": {
         type: "content",
-        title: "CƠ CHÂN",
+        title: "CƠ CẲNG CHÂN",
         content: `
             <div class="content-section">
                 <h3>Giải trình</h3>
