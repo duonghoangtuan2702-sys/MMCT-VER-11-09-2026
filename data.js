@@ -256,7 +256,7 @@ const appData = {
             <div class="content-section">
                 <h3>Giải trình</h3>
                 <p>Tương tự như việc bạn có thể thừa hưởng màu mắt của mình từ cha, hoặc hình dạng mũi từ mẹ, bạn cũng có thể thừa hưởng những cảm xúc bị mắc kẹt từ cha mẹ ruột của bạn, nhận được vào thời điểm thụ thai.</p>
-                <p>Một số năng lượng kế thừa có thể quay ngược lại nhiều thế hệ. Một số có thể đã tô điểm tính cách của bạn theo cách không mong muốn, hoặc có thể khiến bạn gặp các vấn đề nghiêm trọng về tình cảm và thể chất.</p>
+                <p>Một số năng lượng cảm xúc có thể kế thừa hưởng qua nhiều thế hệ. Một số có thể đã tô điểm tính cách của bạn theo cách không mong muốn, hoặc có thể khiến bạn gặp các vấn đề nghiêm trọng về tình cảm và thể chất.</p>
                 <p>Một cảm xúc có nhiều khả năng được truyền từ cha mẹ sang con cái nếu trải nghiệm cảm xúc ban đầu là quan trọng và mạnh mẽ.</p>
                 <p>Cảm xúc bị mắc kẹt là một quả cầu năng lượng rung động có kích thước bằng bàn tay bạn đang nắm chặt.</p>
                 <p>Cảm xúc bị mắc kẹt có thể ẩn náu ở bất cứ đâu trong cơ thể bạn, nơi chúng có thể tạo ra một lực bóp méo trường năng lượng, có thể dẫn đến tất cả các loại vấn đề về thể chất và cảm xúc.</p>
@@ -264,7 +264,7 @@ const appData = {
             <div class="content-section">
                 <h3>Giải mã</h3>
                 <p><strong>Bước 1:</strong></p>
-                <p>Hỏi: Có phải cảm xúc bị mắc kẹt kế thừa trong Cột A không?</p>
+                <p>Hỏi: Có phải cảm xúc mắc kẹt di truyền cần tìm nằm ở Cột A không?</p>
                 <ul>
                     <li>Nếu có, nó nằm trong Cột A.</li>
                     <li>Nếu không, nó nằm trong Cột B.</li>
@@ -285,24 +285,24 @@ const appData = {
                 <p>Hỏi: Có phải ______ không?</p>
                 <p>Kiểm tra từng cảm xúc trong ô đó, từng cái một, cho đến khi kiểm tra được mức độ chính xác/sự thật qua kiểm tra cơ bắp.</p>
                 <p><strong>Bước 5:</strong></p>
-                <p>Hỏi: Bạn có thừa hưởng điều này từ mẹ bạn không?</p>
+                <p>Hỏi: Nó có phải xuất phát từ mẹ không?</p>
                 <ul>
                     <li>Nếu có, hãy lưu ý điều này.</li>
-                    <li>Nếu không, nó được thừa kế từ cha của bạn — hãy lưu ý điều này.</li>
+                    <li>Nếu không, nó được xuất phát từ cha của bạn — hãy lưu ý điều này.</li>
                 </ul>
                 <p>Chuyển sang bước 6.</p>
                 <p><strong>Bước 6:</strong></p>
-                <p>Hỏi: Cha mẹ có thừa kế nó không?</p>
+                <p>Hỏi: Cha (hoặc mẹ,kết quả ở các bước trước) có thừa hưởng nó không?</p>
                 <ul>
                     <li>Nếu không, hãy chuyển sang Bước 7.</li>
-                    <li>Nếu có, hãy xác định cha mẹ của họ.</li>
+                    <li>Nếu có, hãy xác định nó đến từ cha hay mẹ của họ (tức là ông hoặc bà của bạn).</li>
                 </ul>
-                <p>Lặp lại quá trình cơ bản này nếu cần, cho đến khi bạn tìm thấy tổ tiên ban đầu, người đã tạo ra năng lượng.</p>
-                <p>Nếu nó lớn hơn ba hoặc bốn thế hệ, thì việc xác định dòng dõi chính xác của nó có thể không quan trọng. Tại thời điểm này, bạn có thể hỏi: Liệu điều này có quay trở lại xa hơn không?</p>
-                <p>Nếu có, bạn có thể chỉ cần xác định tổng số thế hệ.</p>
-                <p>Hỏi: Liệu điều này có trở lại mười thế hệ?</p>
+                <p>Lặp lại quá trình cơ bản này đến ba mẹ của ông bà nếu cần, cho đến khi bạn tìm thấy tổ tiên đã tạo ra năng lượng di truyền này.</p>
+                <p>Nếu đến đời ba mẹ của ông bà mà vẫn cần xác định thế hệ kế tiếp, thì việc xác định dòng dõi chính xác của nó có thể không quan trọng. Tại thời điểm này, bạn có thể hỏi: Liệu Cảm xúc di truyền này có bắt nguồn từ tổ tiên đời thứ 4 trở đi không? </p>
+                <p>Nếu không,thì cảm xúc di truyền này sẽ xuất phát từ tổ tiên đời thứ 4. Lúc này bạn cần xác định tiếp nó đến từ người nữ hay người nam.</p>
+                <p>Nếu có, Hỏi: Liệu nó có xuất phát từ tổ tiên đời thứ 10 trở lên không?</p>
                 <p>Nếu có, hãy hỏi: Liệu điều này có quay trở lại 15 thế hệ? Theo cách này, hãy thu hẹp nó cho đến khi bạn tìm thấy thế hệ chính xác khi cảm xúc xảy ra (ví dụ: 16 thế hệ trở lại).</p>
-                <p>Tùy chọn: Nếu người đó đã có con, bạn cũng có thể hỏi: Có ai trong số những người con của họ thừa hưởng chứng bệnh này không? Nếu có, bạn có thể hỏi đó là ai.</p>
+                <p>Tùy chọn: Nếu người đó đã có con, bạn cũng có thể hỏi: Có ai trong số những người con của họ thừa hưởng cảm xúc di truyền này không? Nếu có, bạn có thể hỏi đó là ai.</p>
                 <p>Khi bạn đã xác định được phả hệ của cảm xúc bị mắc kẹt di truyền này, hãy chuyển sang Bước 7.</p>
                 <p><strong>Bước 7:</strong></p>
                 <p>Hỏi: Có cần xác định thêm về cảm xúc này không?</p>
@@ -670,56 +670,57 @@ const appData = {
             </div>
             <div class="content-section">
                 <h3>Giải mã</h3>
-                <p><strong>Bước 1:</strong></p>
-                <p>Hỏi: Cảm xúc bức tường trái tim trước khi thụ thai có bị mắc kẹt trong Cột A không?<span style="display:none">[cite: 8]</span></p>
+                 <p><strong>Bước 1:</strong></p>
+                <p>Hỏi: Có phải cảm xúc bức tường trái tim di truyền cần tìm nằm ở Cột A không?</p>
                 <ul>
-                    <li>Nếu có, nó nằm trong Cột A.<span style="display:none">[cite: 8]</span></li>
-                    <li>Nếu không, nó nằm trong Cột B.<span style="display:none">[cite: 8]</span></li>
+                    <li>Nếu có, nó nằm trong Cột A.</li>
+                    <li>Nếu không, nó nằm trong Cột B.</li>
                 </ul>
-                <p>Chuyển sang Bước 2<span style="display:none">[cite: 8]</span></p>
+                <p>Chuyển sang Bước 2</p>
                 <p><strong>Bước 2:</strong></p>
-                <p>Hỏi: Nó có ở Hàng Lẻ không?<span style="display:none">[cite: 8]</span></p>
+                <p>Hỏi: Nó có ở Hàng Lẻ không?</p>
                 <ul>
-                    <li>Nếu có, nó nằm ở Hàng Lẻ (1, 3 hoặc 5).<span style="display:none">[cite: 8]</span></li>
-                    <li>Nếu không, nó ở Hàng chẵn (2, 4 hoặc 6).<span style="display:none">[cite: 8]</span></li>
+                    <li>Nếu có, nó nằm ở Hàng Lẻ (1, 3 hoặc 5).</li>
+                    <li>Nếu không, nó ở Hàng chẵn (2, 4 hoặc 6).</li>
                 </ul>
-                <p>Chuyển sang Bước 3 khi bạn có câu trả lời.<span style="display:none">[cite: 8]</span></p>
+                <p>Chuyển sang Bước 3 khi bạn có câu trả lời.</p>
                 <p><strong>Bước 3:</strong></p>
-                <p>Đối với Lẻ, hãy hỏi: Nó có ở Hàng 1 không? (Gọi tên từng hàng lẻ một).<span style="display:none">[cite: 8]</span></p>
-                <p>Đối với Chẵn, hãy hỏi: Nó có ở Hàng 2 không? (Đặt tên cho từng hàng chẵn một).<span style="display:none">[cite: 8]</span></p>
-                <p>Chuyển sang Bước 4 khi bạn có câu trả lời.<span style="display:none">[cite: 8]</span></p>
+                <p>Đối với Lẻ, hãy hỏi: Nó có ở Hàng 1 không? (Gọi tên từng hàng lẻ một).</p>
+                <p>Đối với Chẵn, hãy hỏi: Nó có ở Hàng 2 không? (Đặt tên cho từng hàng chẵn một).</p>
+                <p>Chuyển sang Bước 4 khi bạn có câu trả lời.</p>
                 <p><strong>Bước 4:</strong></p>
-                <p>Hỏi: Có phải ______ không?<span style="display:none">[cite: 8]</span></p>
-                <p>Kiểm tra từng cảm xúc trong ô đó, từng cái một, cho đến khi kiểm tra được mức độ chính xác/sự thật qua kiểm tra cơ bắp.<span style="display:none">[cite: 8]</span></p>
+                <p>Hỏi: Có phải ______ không?</p>
+                <p>Kiểm tra từng cảm xúc trong ô đó, từng cái một, cho đến khi kiểm tra được mức độ chính xác/sự thật qua kiểm tra cơ bắp.</p>
                 <p><strong>Bước 5:</strong></p>
-                <p>Hỏi: Bạn có thừa kế cảm xúc này từ mẹ bạn không?<span style="display:none">[cite: 8]</span></p>
+                <p>Hỏi: Nó có phải xuất phát từ mẹ không?</p>
                 <ul>
-                    <li>Nếu có, ghi chú lại.<span style="display:none">[cite: 8]</span></li>
-                    <li>Nếu không, nó được thừa kế từ cha bạn - ghi chú lại.<span style="display:none">[cite: 8]</span></li>
+                    <li>Nếu có, hãy lưu ý điều này.</li>
+                    <li>Nếu không, nó được xuất phát từ cha của bạn — hãy lưu ý điều này.</li>
                 </ul>
-                <p>Tiến đến bước 6.<span style="display:none">[cite: 8]</span></p>
+                <p>Chuyển sang bước 6.</p>
                 <p><strong>Bước 6:</strong></p>
-                <p>Hỏi: Cha/mẹ bạn đó có thừa kế nó không?<span style="display:none">[cite: 8]</span></p>
+                <p>Hỏi: Cha (hoặc mẹ,kết quả ở các bước trước) có thừa hưởng nó không?</p>
                 <ul>
-                    <li>Nếu không, chuyển sang Bước 7.<span style="display:none">[cite: 8]</span></li>
-                    <li>Nếu có, xác định cha mẹ nào của họ.<span style="display:none">[cite: 8]</span></li>
+                    <li>Nếu không, hãy chuyển sang Bước 7.</li>
+                    <li>Nếu có, hãy xác định nó đến từ cha hay mẹ của họ (tức là ông hoặc bà của bạn).</li>
                 </ul>
-                <p>Lặp lại quy trình cơ bản này theo nhu cầu, cho đến khi bạn tìm thấy tổ tiên gốc tạo ra năng lượng này.<span style="display:none">[cite: 8]</span></p>
-                <p>Nếu nó cũng từ hơn ba hoặc bốn thế hệ, có thể không quan trọng để xác định dòng dõi chính xác của nó. Tại thời điểm này, bạn có thể hỏi: Liệu nó có thế hệ xa hơn không?<span style="display:none">[cite: 8]</span></p>
-                <p>Nếu có, bạn có thể đơn giản xác định tổng số thế hệ.<span style="display:none">[cite: 8]</span></p>
-                <p>Hỏi: Liệu nó có thế hệ mười thế hệ trở lên không?<span style="display:none">[cite: 8]</span></p>
-                <p>Nếu có, hỏi: Liệu nó có thế hệ mười lăm thế hệ trở lên không? Theo cách này, thu hẹp nó cho đến khi bạn tìm thấy thế hệ chính xác khi cảm xúc xuất hiện (ví dụ: 16 thế hệ trở lại).<span style="display:none">[cite: 8]</span></p>
-                <p>Tùy chọn: Nếu người đó đã có con, bạn cũng có thể hỏi: Có ai trong số những người con của họ thừa hưởng chứng bệnh này không? Nếu có, bạn có thể hỏi đó là ai.<span style="display:none">[cite: 8]</span></p>
-                <p>Một khi bạn đã xác định được thế hệ của cảm xúc bức tường trái tim thừa kế Thừa kế này, chuyển sang mối liên hệ.<span style="display:none">[cite: 8]</span></p>
+                <p>Lặp lại quá trình cơ bản này đến ba mẹ của ông bà nếu cần, cho đến khi bạn tìm thấy tổ tiên đã tạo ra năng lượng di truyền này.</p>
+                <p>Nếu đến đời ba mẹ của ông bà mà vẫn cần xác định thế hệ kế tiếp, thì việc xác định dòng dõi chính xác của nó có thể không quan trọng. Tại thời điểm này, bạn có thể hỏi: Liệu Cảm xúc bức tường trái tim di truyền này có bắt nguồn từ tổ tiên đời thứ 4 trở đi không? </p>
+                <p>Nếu không,thì cảm xúc di truyền này sẽ xuất phát từ tổ tiên đời thứ 4. Lúc này bạn cần xác định tiếp nó đến từ người nữ hay người nam.</p>
+                <p>Nếu có, Hỏi: Liệu nó có xuất phát từ tổ tiên đời thứ 10 trở lên không?</p>
+                <p>Nếu có, hãy hỏi: Liệu điều này có quay trở lại 15 thế hệ? Theo cách này, hãy thu hẹp nó cho đến khi bạn tìm thấy thế hệ chính xác khi cảm xúc xảy ra (ví dụ: 16 thế hệ trở lại).</p>
+                <p>Tùy chọn: Nếu người đó đã có con, bạn cũng có thể hỏi: Có ai trong số những người con của họ thừa hưởng cảm xúc bức tường di truyền này không? Nếu có, bạn có thể hỏi đó là ai.</p>
+               
+                <p>Một khi bạn đã xác định được thế hệ của cảm xúc bức tường trái tim di truyền này, chuyển sang mối liên hệ.<span style="display:none">[cite: 8]</span></p>
             </div>
             <div class="content-section">
                 <h3>Mối liên hệ</h3>
-                <p>Hiếm khi cần phải xác định sự mất cân bằng liên quan với một hợp chất cảm xúc di truyền.<span style="display:none">[cite: 8]</span></p>
+                <p>Hiếm khi cần phải xác định sự mất cân bằng liên quan đến cảm xúc di truyền.<span style="display:none">[cite: 8]</span></p>
                 <p>Chuyển sang Giải phóng<span style="display:none">[cite: 8]</span></p>
             </div>
             <div class="content-section">
                 <h3>Giải phóng</h3>
-                <p>Vuốt mười lần bằng nam châm hoặc bàn tay của bạn trên bất kỳ độ dài nào của kinh mạch chủ đạo, đồng thời giữ ý định giải phóng hợp chất cảm xúc di truyền.<span style="display:none">[cite: 8]</span></p>
+                <p>Vuốt mười lần bằng nam châm hoặc bàn tay của bạn trên bất kỳ độ dài nào của kinh mạch chủ đạo, đồng thời giữ ý định giải phóng cảm xúc bức tường trái tim di truyền.<span style="display:none">[cite: 8]</span></p>
             </div>
             <div class="content-section">
                 <h3>Bảng Mật Mã Cảm Xúc</h3>
@@ -1476,9 +1477,9 @@ const appData = {
                 <p>Cầu nguyện đặc biệt hữu ích khi đối phó với các thực thể.<span style="display:none">[cite: 20]</span></p>
                 <p>Có ba lựa chọn để xóa một thực thể.<span style="display:none">[cite: 20]</span></p>
                 <ul>
-                    <li>Lựa chọn đầu tiên là chỉ cần vuốt ba lần bằng nam châm hoặc bàn tay của bạn trên bất kỳ độ dài nào của kinh mạch với ý định giải phóng thực thể.<span style="display:none">[cite: 20]</span></li>
-                    <li>Lựa chọn thứ hai là thừa nhận sự hiện diện của thực thể và tập trung những rung động của lòng trắc ẩn và tình yêu đối với thực thể và vuốt ba lần bằng nam châm hoặc bàn tay của bạn trên bất kỳ chiều dài nào của kinh mạch để giải phóng thực thể, gửi nó ra ánh sáng.<span style="display:none">[cite: 20]</span></li>
-                    <li>Lựa chọn thứ ba là vuốt ba lần bằng nam châm hoặc bàn tay của bạn trên bất kỳ độ dài nào của kinh mạch trong khi nói các từ có tác dụng này: "Thực thể (hoặc Thực thể, nếu là số nhiều) - tên của Chúa Giê-xu Christ, (hoặc Đấng sáng tạo, Quyền lực cao hơn, v.v.) Tôi ra lệnh cho bạn rời khỏi người này và không bao giờ làm phiền anh ta / cô ta nữa. "<span style="display:none">[cite: 20]</span></li>
+                    <li>Lựa chọn đầu tiên là chỉ cần vuốt ba lần bằng nam châm hoặc bàn tay của bạn trên bất kỳ độ dài nào của kinh mạch Đốc với ý định giải phóng thực thể.<span style="display:none">[cite: 20]</span></li>
+                    <li>Lựa chọn thứ hai là thừa nhận sự hiện diện của thực thể và tập trung những rung động của lòng trắc ẩn và tình yêu đối với thực thể và vuốt ba lần bằng nam châm hoặc bàn tay của bạn trên bất kỳ chiều dài nào của kinh mạch Đốc để giải phóng thực thể,với ý định gửi nó về phía ánh sáng.<span style="display:none">[cite: 20]</span></li>
+                    <li>Lựa chọn thứ ba là vuốt ba lần bằng nam châm hoặc bàn tay của bạn trên bất kỳ độ dài nào của kinh mạch Đốc trong khi nói các từ có tác dụng này: "Hỡi Thực thể (hoặc Các Thực thể, nếu là số nhiều) - tên của Chúa Giê-xu Christ, (hoặc Đấng sáng tạo, Thượng Đế, v.v.) Ta ra lệnh cho bạn rời khỏi người này và không bao giờ làm phiền anh ta / cô ta nữa. "<span style="display:none">[cite: 20]</span></li>
                 </ul>
             </div>
             <div class="content-section">
